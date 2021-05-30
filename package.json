@@ -8,10 +8,13 @@
     "@babel/preset-env": "^7.14.4",
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.13.0",
+    "@types/enzyme": "^3.10.8",
     "@types/jest": "^26.0.23",
     "@types/jsdom": "^16.2.10",
     "@types/react": "^17.0.8",
     "@types/react-dom": "^17.0.5",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
+    "enzyme": "^3.11.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "jest": "^27.0.3",
@@ -28,6 +31,12 @@
     "react-dom": "^17.0.2"
   },
   "jest": {
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.png$": "<rootDir>/__mocks__/fileMock.ts"
+    },
+    "setupFiles": [
+			"<rootDir>/src/setupTests.ts"
+		]
   }
 }

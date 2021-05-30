@@ -2,6 +2,8 @@ import React from "react";
 import { act } from "react-dom/test-utils";
 import { render, unmountComponentAtNode } from "react-dom";
 import { Menu } from "./Menu";
+import Icon from "./icon.png";
+import { shallow } from "enzyme";
 
 let root: HTMLDivElement | null = null;
 
@@ -20,21 +22,14 @@ afterEach(() => {
 
 describe("Menu", () => {
     it("snapshot", () => {
-        const container: HTMLDivElement = root!;
-        act(() => {
-            render(<Menu />, container);
-        });
-
-        expect(container).toMatchSnapshot();
+        const menu = shallow(<Menu />);
+        expect(menu.html()).toMatchSnapshot();
     });
 
     it("should render", () => {
-        const container: HTMLDivElement = root!;
-        act(() => {
-            render(<Menu />, container);
-        })
+        const menu = shallow(<Menu />);
 
-        expect(container.querySelector("img")?.src).toBe("icon.png");
-        expect(container.textContent).toBe("Seonbi");
+        expect(menu.find("img").prop("src")).toBe(Icon);
+        expect(menu.text()).toBe("Seonbi");
     })
 })
