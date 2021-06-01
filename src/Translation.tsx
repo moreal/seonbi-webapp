@@ -29,8 +29,8 @@ export const Translation: React.FC = () => {
     useEffect(() => {
         const headers = new Headers();
         headers.append("Content-Type", "application/json");
-        headers.append("Host", "http://127.0.0.1:10000");
-        axios.post("http://127.0.0.1:10000", {
+        headers.append("Host", "https://seonbi.moreal.dev/");
+        axios.post("https://seonbi.moreal.dev/", {
             "sourceHtml": translationSource,
             "preset": "ko-kr",
         }, {
