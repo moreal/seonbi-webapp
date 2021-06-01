@@ -6,7 +6,7 @@ This is simple translation web application using [seonbi].
 
 # ⛳ Goals
 
-- [ ] Share content via URL like [Google Translation].
+- [x] Share content via URL like [Google Translation].
 - [ ] Configurable [seonbi]'s options with easy settings UI.
 - [ ] Awesome project which tests all source fully and automatically.
 
