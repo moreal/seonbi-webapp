@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu } from "./Menu";
-import { Translation } from "./Translation";
+import { Translation } from "./transaction";
 
 export const App: React.FC = () => {
     return <div style={{
