@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "./icon.png";
+import Icon from "../../icon.png";
 
 export const Menu: React.FC = () => {
     return <div style={{
