@@ -1,19 +1,28 @@
 {
   "scripts": {
     "build": "webpack",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.5",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/preset-env": "^7.14.4",
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.13.0",
+    "@storybook/addon-actions": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/cli": "^6.3.8",
+    "@storybook/react": "^6.3.8",
     "@types/enzyme": "^3.10.8",
     "@types/jest": "^26.0.23",
     "@types/jsdom": "^16.2.10",
     "@types/react": "^17.0.8",
     "@types/react-dom": "^17.0.5",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
+    "babel-loader": "^8.2.2",
     "enzyme": "^3.11.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
@@ -36,7 +45,7 @@
       "\\.png$": "<rootDir>/__mocks__/fileMock.ts"
     },
     "setupFiles": [
-			"<rootDir>/src/setupTests.ts"
-		]
+      "<rootDir>/src/setupTests.ts"
+    ]
   }
 }
