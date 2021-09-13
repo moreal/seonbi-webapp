@@ -1,7 +1,11 @@
 import axios from "axios";
 import React, { CSSProperties, useEffect, useState } from "react";
 
-export const Translation: React.FC = () => {
+export interface TranslationOptions {
+    apiEndpoint: string,
+};
+
+export const Translation: React.FC<TranslationOptions> = ({ apiEndpoint }) => {
     const [translationSource, setTranslationSource] = useState<string>(() => decodeURI(new URLSearchParams(location.search).get("text") ?? ""));
     const [translated, setTranslated] = useState<string>(translationSource);
 
@@ -29,8 +33,8 @@ export const Translation: React.FC = () => {
     useEffect(() => {
         const headers = new Headers();
         headers.append("Content-Type", "application/json");
-        headers.append("Host", "https://seonbi.moreal.dev/");
-        axios.post("https://seonbi.moreal.dev/", {
+        headers.append("Host", apiEndpoint);
+        axios.post(apiEndpoint, {
             "sourceHtml": translationSource,
             "preset": "ko-kr",
         }, {

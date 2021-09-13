@@ -1,9 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { App } from "./App";
+import { App, AppOptions } from "./App";
+
+const options: AppOptions = {
+    apiEndpoint: "https://seonbi.moreal.dev/"
+};
 
 ReactDOM.render(
     <React.StrictMode>
-        <App/>
+        <App {...options} />
     </React.StrictMode>,
     document.getElementById("root"));
