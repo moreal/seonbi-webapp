@@ -1,7 +1,6 @@
 import React from "react";
 import { unmountComponentAtNode } from "react-dom";
 import { Menu } from "./menu";
-import Icon from "./icon.png";
 import { shallow } from "enzyme";
 
 let root: HTMLDivElement | null = null;
@@ -28,7 +27,6 @@ describe("Menu", () => {
     it("should render", () => {
         const menu = shallow(<Menu />);
 
-        expect(menu.find("img").prop("src")).toBe(Icon);
         expect(menu.text()).toBe("Seonbi");
     })
 })

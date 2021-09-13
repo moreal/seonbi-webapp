@@ -1,5 +1,4 @@
 import React from "react";
-import Icon from "../../icon.png";
 
 export const Menu: React.FC = () => {
     return <div style={{
@@ -14,7 +13,6 @@ export const Menu: React.FC = () => {
         margin: 0,
         paddingLeft: "40px",
     }}>
-        <img src={Icon} style={{ height: "40px", width: "40px" }} />
         <span style={{ lineHeight: "40px" }}>Seonbi</span>
     </div>
 }
