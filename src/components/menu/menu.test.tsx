@@ -1,6 +1,5 @@
 import React from "react";
-import { act } from "react-dom/test-utils";
-import { render, unmountComponentAtNode } from "react-dom";
+import { unmountComponentAtNode } from "react-dom";
 import { Menu } from "./menu";
 import Icon from "./icon.png";
 import { shallow } from "enzyme";

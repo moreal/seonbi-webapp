@@ -4,7 +4,7 @@ import Icon from "../../icon.png";
 export const Menu: React.FC = () => {
     return <div style={{
         display: "flex",
-        alignItems:"center",
+        alignItems: "center",
         width: "auto",
         minHeight: "80px",
         borderWidth: 0,
@@ -12,11 +12,9 @@ export const Menu: React.FC = () => {
         borderColor: "black",
         borderStyle: "solid",
         margin: 0,
-        // paddingTop: "20px",
-        // paddingBottom: "0",
         paddingLeft: "40px",
     }}>
-        <img src={Icon} style={{ height: "40px", width: "40px" }}/>
+        <img src={Icon} style={{ height: "40px", width: "40px" }} />
         <span style={{ lineHeight: "40px" }}>Seonbi</span>
     </div>
 }

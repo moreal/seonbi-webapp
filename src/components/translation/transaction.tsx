@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { CSSProperties, useCallback, useEffect, useMemo, useState } from "react";
+import React, { CSSProperties, useEffect, useState } from "react";
 
 export const Translation: React.FC = () => {
     const [translationSource, setTranslationSource] = useState<string>(() => decodeURI(new URLSearchParams(location.search).get("text") ?? ""));
@@ -48,7 +48,7 @@ export const Translation: React.FC = () => {
     }}>
         <textarea style={textareaStyle} onChange={event => {
             setTranslationSource(event.currentTarget.value);
-        }} value={translationSource}/>
-        <textarea readOnly style={textareaStyle} value={translated}/>
+        }} value={translationSource} />
+        <textarea readOnly style={textareaStyle} value={translated} />
     </div>
 }
