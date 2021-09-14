@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { CSSProperties, useEffect, useState } from "react";
+import { decode } from "html-entities";
 
 export interface TranslationOptions {
     apiEndpoint: string,
@@ -53,6 +54,8 @@ export const Translation: React.FC<TranslationOptions> = ({ apiEndpoint }) => {
         <textarea style={textareaStyle} onChange={event => {
             setTranslationSource(event.currentTarget.value);
         }} value={translationSource} />
-        <textarea readOnly style={textareaStyle} value={translated} />
+        <div>
+            {decode(translated, { level: "html5" })}
+        </div>
     </div>
 }
