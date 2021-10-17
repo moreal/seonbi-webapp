@@ -1,5 +1,7 @@
 *<h1 align="center"><b>seonbi-webapp</b></h1>*
 
+Run https://seonbi-webapp.pages.dev/
+
 # 韓 What is seonbi-webapp?
 
 This is simple translation web application using [seonbi].
