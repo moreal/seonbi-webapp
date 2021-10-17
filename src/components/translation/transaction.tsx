@@ -27,7 +27,8 @@ export const Translation: React.FC<TranslationOptions> = ({ apiEndpoint }) => {
     }, [translationSource]);
 
     const textareaStyle: CSSProperties = {
-        width: "400px",
+        width: "50%",
+        maxWidth: "50%",
         height: "300px"
     };
 
@@ -50,11 +51,18 @@ export const Translation: React.FC<TranslationOptions> = ({ apiEndpoint }) => {
 
     return <div style={{
         marginTop: "50px",
+        display: "flex",
+        justifyContent: "center"
     }}>
         <textarea style={textareaStyle} onChange={event => {
             setTranslationSource(event.currentTarget.value);
         }} value={translationSource} />
-        <div>
+        <div style={{
+            width: "50%",
+            maxWidth: "50%",
+            display: "block",
+            overflowWrap: "break-word",
+        }}>
             {decode(translated, { level: "html5" })}
         </div>
     </div>
